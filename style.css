@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    background-color: #333;
+    color: #fff;
+}
+
+
+.header{
+    background: hsl(0, 2%, 9%);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.logo img{
+    height: 80px;
+    width: 220px;
+}
+
+.header h1{
+    font-size: 40px;
+    font-weight: 600;
+    text-shadow: 2px 2px 2px #777;
+}
+
+.header button{
+    cursor: pointer;
+    height: 45px;
+    padding: 0 18px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    background: #e50914;
+    color: #fff;
+}
+
+.header button:hover{
+    background: #fff;
+    color: #000;
+}
+
+.sidebar{
+    width: 260px;
+    height: calc(100vh - 80px);
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 80px;
+}
+
+.sidebar h1{
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+
+.search-box{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.search-box input{
+    flex: 1;
+    padding: 8px 10px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+.search-box .btn{
+    padding: 8px 14px;
+    background-color: #e50914;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-box .btn:hover{
+    background: #fff;
+    color: #111;
+}
+
+
+.menu{
+    list-style: none;
+}
+
+.menu li{
+    padding: 12px 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.menu li:hover,
+.menu li.active{
+    background: #fff;
+    color: #000;
+}
+
+
+.main-content{
+    margin-left: 260px;
+    padding: 20px;
+    background: #000;
+    min-height: 100vh;
+}
+
+.conta h1{
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+
+.movie-slider{
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.movie-slider::-webkit-scrollbar{
+    display: none;
+}
+
+.movie-card{
+    min-width: 180px;
+    height: 260px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.movie-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-card:hover{
+    transform: scale(1.08);
+}
+
+hr{
+    border: none;
+    height: 2px;
+    background: #777;
+    margin: 10px 0;
+}
+
+
+.trending{
+    padding: 20px;
+}
+.trending h2{
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 15px;}
+
+.trending-container{
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+}
+
+.trend-card{
+    position: relative;
+    min-width: 220px;
+    height: 320px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #111;
+}
+
+.trend-card img,
+.trend-card video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s ease;
+}
+
+.trend-card video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.trend-card:hover video{
+    opacity: 1;
+}
+
+.trend-card:hover img{
+    opacity: 0;
+}
+
+
+.trend-card p{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 14px;
+    z-index: 2;
+}
+
+.footer{
+     margin-left: 260px;
+    padding: 20px;
+    background: #777;
+   min-height: 10vh;
+
+}
+.footer h1{
+    text-align: center;
+}
+.icon {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+ justify-content: center;
+}
+
+.icon i {
+  font-size: 28px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.icon i:hover {
+  transform: scale(1.2);
+}
+.fa-google {
+   font-size: 30px;
+  color: #4285F4
+   
+}
+
+.fa-youtube {
+   font-size: 30px; 
+  color: #FF0000;
+}
+
+.fa-instagram {
+    font-size: 30px;
+  color: #E4405F;
+}
+
+@media (max-width: 768px){
+
+    .header h1{
+        font-size: 28px;
+    }
+
+    .logo img{
+        width: 160px;
+        height: auto;
+    }
+
+    .sidebar{
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+    }
+
+    .main-content{
+        margin-left: 0;
+    }
+
+    .movie-card{
+        min-width: 140px;
+        height: 210px;
+    }
+
+    .trend-card{
+        min-width: 180px;
+        height: 260px;
+    }
+}
